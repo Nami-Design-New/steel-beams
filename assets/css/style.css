@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap");
+:target {
+  scroll-margin-top: 100px;
+}
+
+.fancybox__container {
+  z-index: 1999;
+}
+
+.fancybox__track,
+.fancybox__content,
+.carousel__track {
+  direction: ltr !important;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white-color-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  height: 300px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+}
+
+body {
+  background: var(--white-color);
+  overflow-x: hidden;
+  position: relative;
+  direction: rtl;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.preloader {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preloader .preloaderImg {
+  width: 100px;
+  height: 100px;
+  -webkit-mask-image: url("../images/fav.svg");
+          mask-image: url("../images/fav.svg");
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .preloader .preloaderImg {
+    width: 80px;
+    height: 80px;
+  }
+}
+.preloader .preloaderImg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  background-color: #4069a6;
+  transform: translateY(100%);
+  animation: slide-up 1.5s forwards;
+}
+@media screen and (max-width: 1024px) {
+  .preloader .preloaderImg::after {
+    width: 80px;
+    height: 80px;
+  }
+}
+.preloader .preloaderImg::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-image: url("../images/logo-1.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(1) opacity(0.2);
+}
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+header {
+  padding: 24px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+header nav {
+  padding: 16px 0 !important;
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+header nav .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav .logo img {
+  height: 36px;
+  filter: brightness(0) invert(1);
+}
+header nav .nav_links {
+  gap: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav .nav_links a {
+  color: #fff;
+}
+header nav .actions {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+header nav .actions button {
+  color: #fff;
+}
+header nav.sticky {
+  padding: 16px 42px !important;
+  background: rgba(0, 0, 0, 0.2745098039);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+}
+
+main .hero_section {
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+}
+main .hero_section video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .hero_section .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.479);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+main .hero_section .layer h1 {
+  font-size: 18px;
+  color: #fff;
+}
+main .hero_section .layer h2 {
+  color: #fff;
+  font-size: 42px;
+}
+main .hero_section .layer h2 i {
+  font-size: 24px;
+}
+main .about_section {
+  padding: 80px 0;
+}
+main .about_section .content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main .about_section .content h3 {
+  font-size: 32px;
+  color: #4069a6;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+main .about_section .content h3::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 3px;
+  border-radius: 12px;
+  background-color: #4069a6;
+}
+main .about_section .content .statistic {
+  padding: 8px 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+main .about_section .content .statistic .counterUp {
+  font-weight: bold;
+  font-size: 100px;
+  background: rgba(167, 169, 172, 0.062745098);
+  background-size: contain;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-stroke: 1px #a7a9ac;
+  font-family: "Manrope Alt", Sans-serif;
+}
+@media (max-width: 768px) {
+  main .about_section .content .statistic .counterUp {
+    font-size: 70px;
+  }
+}
+main .about_section .content .statistic h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  max-height: 100px;
+  text-align: center;
+  transform: scaleX(-1) scaleY(-1);
+}
+main .about_section .img {
+  width: 100%;
+}
+main .about_section .img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 24px;
+}
+main .about_section .vission_card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+main .about_section .vission_card .head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+main .about_section .vission_card h4 {
+  color: #4069a6;
+  margin: 0;
+}
+main .about_section .vission_card p {
+  margin: 0;
+}
+main .about_section .vission_card .values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+main .about_section .vission_card .values .value {
+  padding: 24px;
+  flex: 1;
+  border: 1px dashed #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 150px;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}/*# sourceMappingURL=style.css.map */
