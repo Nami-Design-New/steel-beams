@@ -8,7 +8,7 @@ $(document).ready(function () {
       const sectionDivs = $(this).find("[data-aos]");
       sectionDivs.each(function (index) {
         if (!$(this).attr("data-aos-delay")) {
-          $(this).attr("data-aos-delay", (index + 1) * 100);
+          $(this).attr("data-aos-delay", (index + 1) * 50);
         }
       });
     });
