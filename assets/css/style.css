@@ -368,6 +368,11 @@ main .about_section .vission_card .values {
   gap: 16px;
   justify-content: center;
 }
+@media screen and (max-width: 576px) {
+  main .about_section .vission_card .values {
+    flex-direction: column;
+  }
+}
 main .about_section .vission_card .values .value {
   padding: 24px;
   flex: 1;
@@ -378,12 +383,6 @@ main .about_section .vission_card .values .value {
   min-width: 150px;
   border-radius: 12px;
   transition: all 0.3s ease-in-out;
-}
-@media screen and (max-width: 768px) {
-  main .about_section .vission_card .values .value {
-    padding: 12px;
-    font-size: 14px;
-  }
 }
 main .services_section {
   padding: 80px 0;
