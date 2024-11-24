@@ -424,6 +424,79 @@ main .team_section .team_card .img .content p {
   color: #fff;
   margin: 0;
 }
+main .projects {
+  padding: 80px 0;
+  background: #fafafa;
+}
+main .projects .swiper {
+  width: 100%;
+}
+main .projects .swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 12px;
+  padding-top: 0;
+}
+main .projects .swiper .swiper-slide::before {
+  content: "";
+  width: 1px;
+  height: 75px;
+  display: block;
+  border: 1px dashed #d7d7d7;
+}
+main .projects .swiper .swiper-slide::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  border: 1px dashed #d7d7d7;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .projects .swiper .swiper-slide .time {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+main .projects .swiper .swiper-slide .time .date {
+  font-weight: bold;
+  color: #4069a6;
+  font-size: 36px;
+}
+main .projects .swiper .swiper-slide .time p {
+  margin: auto;
+  background-color: #fff;
+  flex: 1;
+  padding: 20px 8px;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 12px;
+  margin: 4px 0;
+}
+main .projects .swiper .swiper-slide .time img {
+  width: 100%;
+  max-height: 200px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  padding: 4px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+main .projects .swiper .swiper-slide:nth-child(even)::before {
+  height: 24px;
+}
+main .projects .swiperControl {
+  justify-content: center;
+  padding: 8px;
+}
 main .head_sec {
   color: #4069a6;
   text-align: center;
@@ -452,4 +525,109 @@ main .sub_head {
   font-size: 16px;
   color: #a7a9ac;
   margin-bottom: 40px;
+}
+
+footer {
+  padding: 60px 0 0;
+  display: flex;
+  align-items: end;
+  background-image: url("../images/footer.webp");
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+footer .about {
+  margin-top: 32px;
+  margin-bottom: 0;
+  padding-inline-end: 60px;
+}
+@media screen and (max-width: 768px) {
+  footer .about {
+    padding: 0;
+  }
+}
+footer .title {
+  color: #4069a6;
+  margin-bottom: 32px;
+}
+footer .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+footer .contacts .icon {
+  border: 1px solid #a7a9ac;
+  color: #a7a9ac;
+  font-size: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease-in-out;
+}
+footer .contacts li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+footer .contacts li p {
+  margin: 0;
+}
+footer .contacts li a {
+  color: #000;
+}
+footer .contacts li:hover .icon {
+  color: #4069a6;
+  border-color: #4069a6;
+}
+footer .contacts li:hover a {
+  color: #4069a6;
+}
+footer .images {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+footer .images img {
+  height: 48px;
+}
+footer .images span {
+  display: block;
+  height: 52px;
+  width: 1px;
+  background: #eee;
+}
+footer .copy_rights {
+  border-top: 1px solid #eee;
+  padding: 24px 0;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .copy_rights a {
+  color: #4069a6;
+}
+footer .copy_rights ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+footer .copy_rights ul a {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #a7a9ac;
+  color: #a7a9ac;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+footer .copy_rights ul a:hover {
+  color: #4069a6;
+  border-color: #4069a6;
 }/*# sourceMappingURL=style.css.map */

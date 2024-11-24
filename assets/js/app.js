@@ -43,3 +43,38 @@ window.addEventListener("scroll", () => {
   const header = document.querySelector(".navbar");
   header.classList.toggle("sticky", window.scrollY > 0);
 });
+
+var historySlider = new Swiper(".historySlider", {
+  pagination: {
+    el: ".historyPagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".historyNext",
+    prevEl: ".historyPrev",
+  },
+  slidesPerView: "auto",
+  spaceBetween: 0,
+  speed: 1000,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    991: {
+      slidesPerView: 4,
+    },
+    1400: {
+      slidesPerView: 5,
+    },
+    1800: {
+      slidesPerView: 6,
+    },
+  },
+});
