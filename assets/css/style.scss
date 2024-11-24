@@ -70,7 +70,7 @@ header {
   width: 100%;
   z-index: 999;
   @media screen and (max-width: 768px) {
-    padding: 16px;
+    padding: 8px;
   }
   nav {
     padding: 16px 0 !important;
@@ -91,20 +91,45 @@ header {
     }
     .nav_links {
       gap: 32px;
+      transition: 0.3s ease-in-out;
       @include centerFlex();
       a {
         color: $white;
       }
       @media screen and (max-width: 768px) {
-        display: none;
+        position: absolute;
+        top: -16px;
+        bottom: -16px;
+        right: calc(-50% - 16px);
+        height: calc(100vh + 16px);
+        flex-direction: column;
+        background: white;
+        width: 50%;
+        padding: 48px 32px;
+        align-items: start;
+        justify-content: start;
+        a {
+          color: #000;
+        }
+        &.active {
+          right: -16px;
+        }
       }
     }
     .actions {
       display: flex;
       justify-content: end;
       align-items: center;
+      gap: 16px;
       button {
         color: $white;
+        @include centerFlex();
+      }
+      .toggler {
+        display: none;
+        @media screen and (max-width: 768px) {
+          display: flex;
+        }
       }
     }
     &.sticky {
@@ -402,6 +427,9 @@ main {
             font-weight: bold;
             color: $main;
             font-size: 36px;
+            @media screen and (max-width: 768px) {
+              font-size: 24px;
+            }
           }
           p {
             margin: auto;
@@ -587,12 +615,18 @@ footer {
     gap: 12px;
     img {
       height: 48px;
+      @media screen and (max-width: 768px) {
+        height: 36px;
+      }
     }
     span {
       display: block;
       height: 52px;
       width: 1px;
-      background: #eee;
+      background: #dddddd;
+      @media screen and (max-width: 768px) {
+        height: 42px;
+      }
     }
   }
   .copy_rights {

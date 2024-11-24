@@ -148,7 +148,7 @@ header {
 }
 @media screen and (max-width: 768px) {
   header {
-    padding: 16px;
+    padding: 8px;
   }
 }
 header nav {
@@ -175,6 +175,7 @@ header nav .logo img {
 }
 header nav .nav_links {
   gap: 32px;
+  transition: 0.3s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,16 +185,44 @@ header nav .nav_links a {
 }
 @media screen and (max-width: 768px) {
   header nav .nav_links {
-    display: none;
+    position: absolute;
+    top: -16px;
+    bottom: -16px;
+    right: calc(-50% - 16px);
+    height: calc(100vh + 16px);
+    flex-direction: column;
+    background: white;
+    width: 50%;
+    padding: 48px 32px;
+    align-items: start;
+    justify-content: start;
+  }
+  header nav .nav_links a {
+    color: #000;
+  }
+  header nav .nav_links.active {
+    right: -16px;
   }
 }
 header nav .actions {
   display: flex;
   justify-content: end;
   align-items: center;
+  gap: 16px;
 }
 header nav .actions button {
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav .actions .toggler {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header nav .actions .toggler {
+    display: flex;
+  }
 }
 header nav.sticky {
   padding: 16px 42px !important;
@@ -495,6 +524,11 @@ main .projects .swiper .swiper-slide .time .date {
   color: #4069a6;
   font-size: 36px;
 }
+@media screen and (max-width: 768px) {
+  main .projects .swiper .swiper-slide .time .date {
+    font-size: 24px;
+  }
+}
 main .projects .swiper .swiper-slide .time p {
   margin: auto;
   background-color: #fff;
@@ -681,11 +715,21 @@ footer .images {
 footer .images img {
   height: 48px;
 }
+@media screen and (max-width: 768px) {
+  footer .images img {
+    height: 36px;
+  }
+}
 footer .images span {
   display: block;
   height: 52px;
   width: 1px;
-  background: #eee;
+  background: #dddddd;
+}
+@media screen and (max-width: 768px) {
+  footer .images span {
+    height: 42px;
+  }
 }
 footer .copy_rights {
   border-top: 1px solid #eee;

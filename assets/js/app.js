@@ -78,3 +78,18 @@ var historySlider = new Swiper(".historySlider", {
     },
   },
 });
+
+const toggler = document.querySelector(".toggler");
+const nav = document.querySelector(".nav_links");
+
+const links = document.querySelectorAll(".nav_links a");
+
+toggler.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+});
