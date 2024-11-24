@@ -247,6 +247,9 @@ main {
       display: flex;
       gap: 16px;
       flex-direction: column;
+      @media screen and (max-width: 768px) {
+        padding: 20px;
+      }
       .head {
         display: flex;
         align-items: end;
@@ -258,6 +261,10 @@ main {
       }
       p {
         margin: 0;
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+          text-wrap: balance;
+        }
       }
       .values {
         display: flex;

@@ -344,6 +344,11 @@ main .about_section .vission_card {
   gap: 16px;
   flex-direction: column;
 }
+@media screen and (max-width: 768px) {
+  main .about_section .vission_card {
+    padding: 20px;
+  }
+}
 main .about_section .vission_card .head {
   display: flex;
   align-items: end;
@@ -355,6 +360,12 @@ main .about_section .vission_card h4 {
 }
 main .about_section .vission_card p {
   margin: 0;
+}
+@media screen and (max-width: 768px) {
+  main .about_section .vission_card p {
+    font-size: 14px;
+    text-wrap: balance;
+  }
 }
 main .about_section .vission_card .values {
   display: flex;
