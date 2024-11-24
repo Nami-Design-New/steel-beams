@@ -62,6 +62,11 @@ textarea {
   background: none;
 }
 
+.row {
+  margin: 0;
+  padding: 0;
+}
+
 .preloader {
   background-color: white;
   position: fixed;
@@ -141,6 +146,11 @@ header {
   width: 100%;
   z-index: 999;
 }
+@media screen and (max-width: 768px) {
+  header {
+    padding: 16px;
+  }
+}
 header nav {
   padding: 16px 0 !important;
   border-radius: 200px;
@@ -158,6 +168,11 @@ header nav .logo img {
   height: 36px;
   filter: brightness(0) invert(1);
 }
+@media screen and (max-width: 768px) {
+  header nav .logo img {
+    height: 28px;
+  }
+}
 header nav .nav_links {
   gap: 32px;
   display: flex;
@@ -166,6 +181,11 @@ header nav .nav_links {
 }
 header nav .nav_links a {
   color: #fff;
+}
+@media screen and (max-width: 768px) {
+  header nav .nav_links {
+    display: none;
+  }
 }
 header nav .actions {
   display: flex;
@@ -180,6 +200,11 @@ header nav.sticky {
   background: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
+}
+@media screen and (max-width: 768px) {
+  header nav.sticky {
+    padding: 16px !important;
+  }
 }
 
 main .hero_section {
@@ -196,6 +221,7 @@ main .hero_section video {
 main .hero_section .layer {
   position: absolute;
   top: 0;
+  padding: 12px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -212,6 +238,7 @@ main .hero_section .layer h1 {
 }
 main .hero_section .layer h2 {
   color: #fff;
+  text-align: center;
   font-size: 42px;
 }
 main .hero_section .layer h2 i {
@@ -497,6 +524,66 @@ main .projects .swiperControl {
   justify-content: center;
   padding: 8px;
 }
+main .contact {
+  padding: 80px 0;
+}
+main .contact .map {
+  border-radius: 16px;
+  overflow: hidden;
+}
+main .contact h5 {
+  font-size: 32px;
+  color: #4069a6;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+main .contact h5::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 3px;
+  border-radius: 12px;
+  background-color: #4069a6;
+}
+main .contact form {
+  padding-inline-end: 24px;
+}
+@media screen and (max-width: 768px) {
+  main .contact form {
+    padding: 0;
+  }
+}
+main .contact form button {
+  margin-top: 12px;
+  background: #000;
+  padding: 8px 32px;
+  color: #fff;
+  border-radius: 70px;
+  transition: 0.4s ease-in-out;
+}
+main .contact form button:hover {
+  background: #4069a6;
+}
+main .contact .input_field {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+main .contact .input_field input,
+main .contact .input_field select,
+main .contact .input_field textarea {
+  height: 52px;
+  border: 1px solid #f4f4f4;
+  width: 100%;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 0 12px;
+  outline: none;
+}
+main .contact .input_field textarea {
+  height: 120px;
+}
 main .head_sec {
   color: #4069a6;
   text-align: center;
@@ -532,6 +619,7 @@ footer {
   display: flex;
   align-items: end;
   background-image: url("../images/footer.webp");
+  background-color: #f9f6f1;
   background-size: contain;
   background-position: right bottom;
   background-repeat: no-repeat;
@@ -607,8 +695,17 @@ footer .copy_rights {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  footer .copy_rights {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+}
 footer .copy_rights a {
   color: #4069a6;
+}
+footer .copy_rights p {
+  text-align: center;
 }
 footer .copy_rights ul {
   display: flex;
