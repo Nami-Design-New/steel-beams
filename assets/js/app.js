@@ -44,22 +44,29 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("sticky", window.scrollY > 0);
 });
 
-var historySlider = new Swiper(".historySlider", {
+var projectDetailsSlider = new Swiper(".projectDetailsSlider", {
+  spaceBetween: 0,
+  loop: true,
+  // effect: "fade",
+  speed: 500,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
   pagination: {
-    el: ".historyPagination",
+    el: ".projectDetailsSliderPagination",
     clickable: true,
   },
   navigation: {
-    nextEl: ".historyNext",
-    prevEl: ".historyPrev",
+    nextEl: ".projectDetailsSliderNext",
+    prevEl: ".projectDetailsSliderPrev",
   },
+});
+
+var historySlider = new Swiper(".historySlider", {
   slidesPerView: "auto",
   spaceBetween: 0,
   speed: 1000,
-  autoplay: {
-    delay: 1500,
-    disableOnInteraction: false,
-  },
   breakpoints: {
     0: {
       slidesPerView: 2,
