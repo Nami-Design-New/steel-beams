@@ -291,9 +291,12 @@ main {
 
     .service_card {
       border: 1px solid #eee;
+      background: $white;
       border-radius: 16px;
       overflow: hidden;
       height: 100%;
+      display: flex;
+      flex-direction: column;
       .img {
         width: 100%;
         aspect-ratio: 3 / 2;
@@ -317,6 +320,10 @@ main {
       }
       .content {
         padding: 24px 16px;
+        display: flex;
+        gap: 8px;
+        flex: 1;
+        flex-direction: column;
         h6 {
           color: #000;
           font-size: 18px;
@@ -325,6 +332,11 @@ main {
           margin: 0;
           font-size: 14px;
           color: #a7a9ac;
+        }
+        button{
+          width: fit-content;
+          margin-top: auto;
+          color: $main;
         }
         ul {
           margin-top: 16px;
@@ -442,6 +454,7 @@ main {
           p {
             margin: auto;
             background-color: $white;
+            color: #000;
             flex: 1;
             padding: 20px 8px;
             width: 100%;
