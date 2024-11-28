@@ -486,6 +486,7 @@ main {
   }
   .contact {
     padding: 80px 0;
+    background: #fafafa;
     .map {
       border-radius: 16px;
       overflow: hidden;
@@ -532,7 +533,7 @@ main {
         height: 52px;
         border: 1px solid #f4f4f4;
         width: 100%;
-        background: #fafafa;
+        background: #ffffff;
         border-radius: 12px;
         padding: 0 12px;
         outline: none;
@@ -731,6 +732,65 @@ main {
       }
       h3 {
         color: $main;
+      }
+    }
+  }
+  .partners {
+    position: relative;
+    z-index: 2;
+    padding: 100px 0 60px;
+    overflow: hidden;
+    .sectionTitle {
+      padding-bottom: 10px;
+      margin-bottom: 8px;
+      text-align: center;
+      .title {
+        color: $main;
+        font-weight: bold;
+      }
+      .sub {
+        color: #000;
+        font-weight: bold;
+      }
+      .hint {
+        color: #777;
+        width: min(100% - 40px, 800px);
+        margin: auto;
+        margin-top: 16px;
+      }
+    }
+    .logo {
+      padding: 10px;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1/1;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .swiperControl {
+      position: relative;
+      padding-top: 60px;
+      .swiper-pagination {
+        justify-content: center;
+        .swiper-pagination-bullet {
+          background-color: $white;
+        }
+      }
+    }
+    .inner {
+      background-color: $main;
+      text-align: center;
+      padding: 24px;
+      height: 100%;
+      .subTitle {
+        color: $white;
+        font-weight: bold;
+        font-family: fontBold;
+        margin-bottom: 16px;
       }
     }
   }

@@ -107,3 +107,33 @@ document.addEventListener("click", (e) => {
     nav.classList.remove("active");
   }
 });
+
+var partnersSlider = new Swiper(".partnersSlider", {
+  // centeredSlides: true,
+  loop: true,
+  slidesPerView: "auto",
+  spaceBetween: 12,
+  speed: 1000,
+  pagination: {
+    el: ".partnersPagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    991: {
+      slidesPerView: 5,
+    },
+    1400: {
+      slidesPerView: 6,
+    },
+  },
+});
