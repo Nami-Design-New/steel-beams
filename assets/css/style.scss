@@ -333,8 +333,7 @@ main {
           font-size: 14px;
           color: #a7a9ac;
         }
-        button{
-          width: fit-content;
+        a {
           margin-top: auto;
           color: $main;
         }
@@ -571,6 +570,71 @@ main {
     font-size: 16px;
     color: #a7a9ac;
     margin-bottom: 40px;
+  }
+  .service_details {
+    padding: 80px 0;
+    .content {
+      display: flex;
+      padding: 0;
+      flex-direction: column;
+      gap: 16px;
+      h3 {
+        background: #f4f4f4;
+        padding: 16px;
+        font-size: 24px;
+        color: #000;
+        position: relative;
+        &::before {
+          content: "";
+          width: 4px;
+          height: 100%;
+          background-color: $main;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .title {
+      margin: 32px 0 24px;
+      color: $main;
+      font-size: 28px;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+      gap: 12px;
+      li {
+        background: #f4f4f4;
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        gap: 12px;
+        .icon {
+          min-width: 62px;
+          height: 62px;
+          border-radius: 50%;
+          border: 1px solid $main;
+          @include centerFlex();
+          img {
+            height: 42px;
+            object-fit: contain;
+          }
+        }
+        .content {
+          gap: 0;
+          padding: 0;
+          h6 {
+            color: $main;
+          }
+          p {
+            font-size: 14px;
+            margin: 0;
+          }
+        }
+      }
+    }
   }
 }
 

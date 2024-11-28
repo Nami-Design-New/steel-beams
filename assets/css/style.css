@@ -435,9 +435,7 @@ main .services_section .service_card .content p {
   font-size: 14px;
   color: #a7a9ac;
 }
-main .services_section .service_card .content button {
-  width: -moz-fit-content;
-  width: fit-content;
+main .services_section .service_card .content a {
   margin-top: auto;
   color: #4069a6;
 }
@@ -672,6 +670,74 @@ main .sub_head {
   font-size: 16px;
   color: #a7a9ac;
   margin-bottom: 40px;
+}
+main .service_details {
+  padding: 80px 0;
+}
+main .service_details .content {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  gap: 16px;
+}
+main .service_details .content h3 {
+  background: #f4f4f4;
+  padding: 16px;
+  font-size: 24px;
+  color: #000;
+  position: relative;
+}
+main .service_details .content h3::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: #4069a6;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+main .service_details .title {
+  margin: 32px 0 24px;
+  color: #4069a6;
+  font-size: 28px;
+}
+main .service_details ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 12px;
+}
+main .service_details ul li {
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+}
+main .service_details ul li .icon {
+  min-width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 1px solid #4069a6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .service_details ul li .icon img {
+  height: 42px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .service_details ul li .content {
+  gap: 0;
+  padding: 0;
+}
+main .service_details ul li .content h6 {
+  color: #4069a6;
+}
+main .service_details ul li .content p {
+  font-size: 14px;
+  margin: 0;
 }
 
 .page_header {
