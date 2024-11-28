@@ -91,12 +91,19 @@ const nav = document.querySelector(".nav_links");
 
 const links = document.querySelectorAll(".nav_links a");
 
-toggler.addEventListener("click", () => {
+toggler.addEventListener("click", (e) => {
   nav.classList.toggle("active");
+  e.stopPropagation();
 });
 
 links.forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("active");
   });
+});
+
+document.addEventListener("click", (e) => {
+  if (!nav.contains(e.target) && !toggler.contains(e.target)) {
+    nav.classList.remove("active");
+  }
 });

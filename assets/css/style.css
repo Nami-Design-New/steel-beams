@@ -672,13 +672,18 @@ main .sub_head {
   margin-bottom: 40px;
 }
 main .service_details {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 main .service_details .content {
   display: flex;
   padding: 0;
   flex-direction: column;
   gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  main .service_details .content {
+    margin-top: 62px;
+  }
 }
 main .service_details .content h3 {
   background: #f4f4f4;
@@ -700,12 +705,17 @@ main .service_details .content h3::before {
 main .service_details .title {
   margin: 32px 0 24px;
   color: #4069a6;
-  font-size: 28px;
+  font-size: 22px;
 }
 main .service_details ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   gap: 12px;
+}
+@media screen and (max-width: 768px) {
+  main .service_details ul {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 main .service_details ul li {
   background: #f4f4f4;
@@ -731,6 +741,7 @@ main .service_details ul li .icon img {
 main .service_details ul li .content {
   gap: 0;
   padding: 0;
+  margin: 0;
 }
 main .service_details ul li .content h6 {
   color: #4069a6;
@@ -739,33 +750,23 @@ main .service_details ul li .content p {
   font-size: 14px;
   margin: 0;
 }
-
-.page_header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5568627451), rgba(0, 0, 0, 0.5568627451)), url("../images/header.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 300px;
-  position: relative;
-}
-
-.project_details {
+main .project_details {
   padding: 80px 0;
 }
-.project_details .projectDetailsSlider {
+main .project_details .projectDetailsSlider {
   position: relative;
   aspect-ratio: 9/6;
   border-radius: 2px;
 }
-.project_details .projectDetailsSlider .swiper-slide {
+main .project_details .projectDetailsSlider .swiper-slide {
   position: relative;
 }
-.project_details .projectDetailsSlider .swiper-slide a {
+main .project_details .projectDetailsSlider .swiper-slide a {
   display: block;
   width: 100%;
   height: 100%;
 }
-.project_details .projectDetailsSlider .swiper-slide img {
+main .project_details .projectDetailsSlider .swiper-slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -773,7 +774,7 @@ main .service_details ul li .content p {
   border-radius: 2px;
   display: block;
 }
-.project_details .swiper-button-next {
+main .project_details .swiper-button-next {
   left: 0;
   top: unset;
   right: unset;
@@ -783,14 +784,14 @@ main .service_details ul li .content p {
   width: 32px;
   height: 32px;
 }
-.project_details .swiper-button-next::after {
+main .project_details .swiper-button-next::after {
   color: #fff;
   background: none;
   font-family: "Font Awesome 6 Pro";
   content: "\f104";
   font-size: 18px;
 }
-.project_details .swiper-button-prev {
+main .project_details .swiper-button-prev {
   left: 40px;
   right: unset;
   top: unset;
@@ -800,38 +801,53 @@ main .service_details ul li .content p {
   width: 32px;
   height: 32px;
 }
-.project_details .swiper-button-prev::after {
+main .project_details .swiper-button-prev::after {
   color: #fff;
   background: none;
   font-family: "Font Awesome 6 Pro";
   content: "\f105";
   font-size: 18px;
 }
-.project_details .swiper-pagination {
+main .project_details .swiper-pagination {
   right: 0 !important;
   left: unset !important;
   transform: translateX(0%);
   bottom: -46px;
   text-align: start;
 }
-.project_details .swiper-pagination .swiper-pagination-bullet {
+main .project_details .swiper-pagination .swiper-pagination-bullet {
   background-color: #4069a6;
 }
-.project_details .swiper-pagination .swiper-pagination-bullet-active {
+main .project_details .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #4069a6;
 }
-.project_details .content {
+main .project_details .content {
   display: flex;
   flex-direction: column;
   padding: 0 24px;
   gap: 16px;
 }
-.project_details .content .head p {
+@media screen and (max-width: 768px) {
+  main .project_details .content {
+    padding: 0;
+    margin-top: 80px;
+  }
+}
+main .project_details .content .head p {
   color: #777;
   font-size: 14px;
 }
-.project_details .content h3 {
+main .project_details .content h3 {
   color: #4069a6;
+}
+
+.page_header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5568627451), rgba(0, 0, 0, 0.5568627451)), url("../images/header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  position: relative;
 }
 
 footer {
